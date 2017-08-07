@@ -1,19 +1,30 @@
-## Introduction
+- Writing data to a file with Python is very easy. First you need some data to write. Here it's stored as a variable called `text`.
 
-Add project description here. What will learners be making?
+	```python
+	text = 'This is some data to write'
+	```
 
-### What you will make
+- The next stage is to open a file. The `open` function needs to be passed the name of the file, and the mode to open it with. Here the mode is `w` which is short for **write**.
 
-Add something here to showcase here, for example:
+	```python
+	file = open('my_document.txt', 'w')
+	```
+- Next, the data can be written to the file.
 
-<div class="scratch-preview">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/160619869/?autostart=false" frameborder="0"></iframe>
-</div>
+	```python
+  file.write(text)
+  ```
+  
+- Lastly the file needs to be closed.
 
-Add instructions here. These should explain either how the finished project will work, or explain how to interact with the content above.
+  ```python
+  file.close()
+  ```
 
-### What you will learn
+- Another way of doing this is to automatically **close** the file, by using the keyword `with`. This is often preferable, as it is easy to forget to **close** the file.
 
-This project covers elements from the following strands of the [Raspberry Pi Digital Making Curriculum](http://rpf.io/curriculum):
-
-+ [Add curriculum strand/level description.](https://www.raspberrypi.org/curriculum/strand/level)
+  ```python
+  text = 'This is some data to write'
+  with open('my_document.txt', 'w') as file:
+	  file.write(text)
+  ```
