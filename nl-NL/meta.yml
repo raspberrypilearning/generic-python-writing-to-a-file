@@ -1,7 +1,7 @@
 ---
-title: Writing data to a file with Python
+title: Gegevens naar een bestand schrijven met Python
 hero_image: images/banner.png
-description: Write data to a file
+description: Schrijf gegevens naar een bestand
 original_url:
 theme: red #possible values: blue, green, navy, orange, red, turquoise, violet, yellow
 duration: 1 #possible values: 1, 2 or 3
@@ -14,4 +14,4 @@ technologies: "python"
 site_areas:
 steps:
   - 
-    title: Writing to a file
+    title: Naar een bestand schrijven
