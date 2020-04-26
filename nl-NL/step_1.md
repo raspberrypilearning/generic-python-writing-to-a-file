@@ -1,30 +1,30 @@
-- Writing data to a file with Python is very easy. First you need some data to write. Here it's stored as a variable called `text`.
+- Gegevens naar een bestand schrijven met Python is heel eenvoudig. Eerst heb je wat gegevens nodig om te schrijven. Hier wordt het opgeslagen als een variabele met de naam `tekst`.
 
     ```python
-    text = 'This is some data to write'
+    tekst = 'Dit zijn enkele gegevens om te schrijven'
     ```
 
-- The next stage is to open a file. You need to pass the name of the file to the `open` function. The function also needs to know with which **mode** to open the file. Here the mode is `w`, which is short for "write".
+- De volgende stap is het openen van een bestand. Je moet de naam van het bestand doorgeven aan de functie `open`. De functie moet ook weten met welke **modus** het bestand wordt geopend. Hier is de modus `w`, wat staat voor "schrijven" (write).
 
     ```python
-    f = open('my_document.txt', 'w', encoding="utf-8")
+    f = open('mijn_document.txt', 'w', encoding="utf-8")
     ```
-- Next, the data can be written to the file.
+- Vervolgens kunnen de gegevens naar het bestand worden geschreven.
 
     ```python
-  f.write(text)
+  f.write(tekst)
   ```
 
-- Lastly, the file needs to be closed.
+- Ten slotte moet het bestand worden gesloten.
 
   ```python
   f.close()
   ```
 
-- Another way of doing this is to automatically **close** the file by using the keyword `with`. This is often preferable, as it is easy to forget to **close** the file.
+- Een andere manier om dit te doen is om het bestand automatisch te **sluiten** door het trefwoord `with`. Dit heeft vaak de voorkeur, omdat het gemakkelijk is om te vergeten het bestand **te sluiten**.
 
   ```python
-  text = 'This is some data to write'
-  with open('my_document.txt', 'w', encoding="utf-8") as f:
-      f.write(text)
+  tekst = 'Dit zijn enkele gegevens om te schrijven'
+with open('mijn_document.txt', 'w', encoding="utf-8") as f:
+    f.write(tekst)
   ```
